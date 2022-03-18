@@ -1,0 +1,40 @@
+body{
+    background: #FB6B6B;
+}
+
+.home{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 180px;
+}
+
+.home img{
+    width: 110px;
+    height: 130px;
+    margin-bottom: 5px;
+}
+
+.home h1{
+    color: #FFFFFF;
+    font-size: 45px;
+    font-family: 'Righteous', sans-serif;
+}
+
+.home button{
+    width: 250px;
+    height: 55px;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+    border-radius: 15px;
+    border: 1px solid #D70900;
+    background: #FFFFFF;
+    margin-top: 130px;
+}
+
+.home button p{
+    font-family: 'Recursive', sans-serif;
+    font-size: 25px;
+    text-align: center;
+    color: #D70900;
+}
