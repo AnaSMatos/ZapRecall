@@ -113,7 +113,7 @@ body{
 
 .open-card{
     width: 300px;
-    height: 130px;
+    height: 140px;
     background: #FFFFD5;
     box-shadow: 0px 4px 5px rgba(0, 0, 0, 0.15);
     border-radius: 5px;
@@ -179,12 +179,28 @@ body{
     background: #2FBE34;
 }
 
+/*Cartas respondidas*/
+.red h1{
+    color: #FF3030;
+    text-decoration: line-through;
+}
+
+.yellow h1{
+    color: #FF922E;
+    text-decoration: line-through;    
+}
+
+.green h1{
+    color: #2FBE34;
+    text-decoration: line-through;  
+}
 /*Footer*/
 
 footer{
     display: flex;
     align-items: center;
     justify-content: center;
+    flex-direction: column;
     height: 70px;
     position: fixed;
     bottom: 0;
@@ -197,6 +213,42 @@ footer{
 footer p{
     font-size: 18px;
     font-family: 'Recursive', sans-serif;
+}
+
+.complete{
+    height: 170px;
+}
+
+.complete img{
+    margin-right: 7px;
+    width: 23px;
+    height: 23px;
+}
+
+.complete h1{
+    font-family: 'Recursive', sans-serif;
+    font-weight: 700;
+    font-size: 18px;
+    color: #333333;
+    margin: 15px 0;
+}
+
+.complete p{
+    margin-bottom: 15px;
+    width: 200px;
+    text-align: center;
+}
+
+.tela-final{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/*Utilitário*/
+
+.hidden{
+    display: none;
 }
 
 
