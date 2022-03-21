@@ -1,11 +1,16 @@
+import React from "react";
+import Results from './Results'
+
 export default function Footer(props){
-    const{completas, acertos} = props;
+    const{completas, acertos, icones} = props;
+
+    
 
     return(
         (completas < 8) ?
         <footer className="incomplete">
             <p>{completas}/8 CONCLUÍDOS</p>
-            <div>{acertos}</div>
+            <Results listaIcones={icones}/>
         </footer> 
         
         : /*end complete*/
@@ -18,7 +23,7 @@ export default function Footer(props){
             </div>
             <p>Você não esqueceu de nenhum flashcard!</p>
             <p>{completas}/8 CONCLUÍDOS</p>
-            <div>{acertos}</div>
+            <Results listaIcones={icones}/>
         </footer> :
 
         <footer className="complete">
@@ -28,7 +33,7 @@ export default function Footer(props){
             </div>
             <p>Ainda faltam alguns... Mas não desanime!</p>
             <p>{completas}/8 CONCLUÍDOS</p>
-            <div>{acertos}</div>
+            <Results listaIcones={icones}/>
         </footer>
     )
 }

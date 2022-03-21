@@ -6,6 +6,8 @@ import Flashcard from  './Flashcard';
 export default function FlashcardList({flashcards}){
     const [complete, setComplete] = React.useState(0);
     const [hit, setHit] = React.useState(0);
+    const [listIcons, setListIcons] = React.useState([]);
+    
 
     return(
         <div className='cards-page'>
@@ -13,10 +15,11 @@ export default function FlashcardList({flashcards}){
             <div className='content-cards'>
                 {flashcards.map(flashcard => {
                     return <Flashcard flashcard={flashcard}  
-                    complete={()=>setComplete(complete+1)} hit={()=>setHit(hit+1)} key={flashcard.index}/>
+                    complete={()=>setComplete(complete+1)} hit={()=>setHit(hit+1)} 
+                    setListIcons={(updatedIcons)=>setListIcons([...listIcons, updatedIcons])} key={flashcard.index}/>
                 })}
             </div>
-            <Footer completas={complete} acertos={hit}/>
+            <Footer completas={complete} acertos={hit} icones={listIcons}/>
         </div>
     )
 }
